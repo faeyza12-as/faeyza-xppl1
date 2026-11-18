@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --navy: #172554;
+  --blue: #3157a4;
+  --blue-soft: #eaf0ff;
+  --sky: #f3f6ff;
+  --ink: #202b43;
+  --muted: #65718a;
+  --line: #dce3f1;
+  --white: #ffffff;
+  --gold: #f3c969;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 38px 18px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 5%, rgba(111, 145, 220, .18), transparent 25rem),
+    linear-gradient(145deg, #edf2ff 0%, #f7f8fc 48%, #e9eef9 100%);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 38px;
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,.85);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(28, 48, 94, .12);
+}
+
+.identity {
+  padding: 4px 0 25px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--navy);
+  position: relative;
+}
+
+.identity::after {
+  content: "LKPD DIGITAL";
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 30px;
+  padding: 5px 12px;
+  font: 500 10px 'Fira Code', monospace;
+  letter-spacing: 1px;
+}
+
+.identity div {
+  display: grid;
+  grid-template-columns: 125px 15px 1fr;
+  gap: 8px;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.identity strong { color: var(--navy); }
+
+.card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin: 0 0 23px;
+  box-shadow: 0 7px 22px rgba(37, 58, 105, .045);
+}
+
+.card:nth-of-type(even) {
+  background: #fbfcff;
+}
+
+.cover {
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(125deg, #172554, #3157a4) !important;
+  border: 0;
+  padding: 42px 36px;
+}
+
+.cover::after {
+  content: "JS";
+  position: absolute;
+  right: 25px;
+  bottom: -52px;
+  color: rgba(255,255,255,.07);
+  font: 700 190px 'Space Grotesk';
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cover h1, .cover h2, .cover p {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.cover h1 {
+  font: 700 30px/1.2 'Space Grotesk';
+  letter-spacing: -.6px;
+  border: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.cover h2 {
+  color: #f3d88e;
+  border: 0;
+  font: 600 23px/1.4 'Space Grotesk';
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.cover p {
+  margin: 7px 0;
+  color: #e1e9ff;
+  font-size: 14px;
+}
+
+h1, h2 {
+  color: var(--navy);
+  line-height: 1.3;
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 { font-size: 27px; }
+h2 { font-size: 22px; }
+
+p, li { font-size: 15px; }
+
+ul, ol { padding-left: 23px; }
+li { padding: 3px 0; }
+
+strong { color: inherit; }
+
+code {
+  color: #24458f;
+  background: #edf2ff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: 'Fira Code', monospace;
+  font-size: .9em;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  color: #eaf0ff;
+  background: #151f3b;
+  border: 1px solid #2b3a63;
+  border-radius: 13px;
+  padding: 19px 21px;
+  font: 13px/1.75 'Fira Code', Consolas, monospace;
+  box-shadow: inset 4px 0 0 var(--gold);
+}
+
+pre code {
+  color: inherit;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  background: white;
+}
+
+th {
+  color: white;
+  background: var(--navy);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e7ebf4;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) { background: #f7f9ff; }
+
+.result {
+  display: inline-block;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 9px;
+  padding: 7px 12px;
+  font-size: 17px;
+}
+
+.note {
+  color: var(--muted);
+  font-style: italic;
+  background: #f5f7fc;
+  border-left: 3px solid var(--gold);
+  padding: 10px 13px;
+  border-radius: 0 8px 8px 0;
+}
+
+.evidence {
+  margin: 20px 0 8px;
+  padding: 10px;
+  background: #f6f8ff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+
+.evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d6deef;
+}
+
+.evidence figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  color: #8791a7;
+  font: 11px 'Fira Code', monospace;
+  letter-spacing: .5px;
+  padding: 18px 0 0;
+}
+
+@media (max-width: 650px) {
+  body { padding: 15px 9px; }
+  .container { padding: 17px 12px; border-radius: 16px; }
+  .identity { padding-bottom: 20px; }
+  .identity div {
+    grid-template-columns: 82px 10px 1fr;
+    gap: 5px;
+    font-size: 13px;
+  }
+  .identity::after {
+    position: static;
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .card { padding: 20px 16px; margin-bottom: 15px; border-radius: 14px; }
+  .cover { padding: 28px 20px; }
+  .cover h1 { font-size: 23px; }
+  .cover h2 { font-size: 19px; margin-bottom: 20px; }
+  .cover::after { font-size: 125px; right: 8px; bottom: -30px; }
+  h1 { font-size: 23px; }
+  h2 { font-size: 19px; }
+  p, li { font-size: 14px; }
+  th, td { font-size: 12px; padding: 9px; }
+  pre { font-size: 11px; padding: 14px; }
+  .evidence { padding: 7px; }
+}
